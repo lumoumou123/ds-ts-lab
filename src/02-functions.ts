@@ -67,3 +67,16 @@ function sortColleagues(
 }
 //console.log(findFriends(friends, (friend) => friend.name.startsWith('Pa')));
 //console.log(findFriends(friends, (friend) => friend.age < 35));
+// 添加兴趣的函数
+function addInterest(friend: Friend, interest: string): string[] {
+  // 检查兴趣列表是否存在，如果不存在则初始化为空数组
+  if (!friend.interests) {
+      friend.interests = [];
+  }
+  // 添加新兴趣到兴趣列表
+  friend.interests.push(interest);
+  // 返回更新后的兴趣列表
+  return friend.interests;
+}
+
+console.log(addInterest(friends[1], 'Politics'));
